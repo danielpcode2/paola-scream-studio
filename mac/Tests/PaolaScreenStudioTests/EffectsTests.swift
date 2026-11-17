@@ -1,6 +1,6 @@
 import AVFoundation
 import XCTest
-@testable import MiRecorder
+@testable import PaolaScreenStudio
 
 final class TimeMapTests: XCTestCase {
     // 10 s recording: cut 2–4, 4× speed 6–8, 1 s intro, 2 s outro.

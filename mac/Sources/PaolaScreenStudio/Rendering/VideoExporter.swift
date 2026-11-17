@@ -261,7 +261,7 @@ final class StudioVideoCompositor: NSObject, AVVideoCompositing, @unchecked Send
         guard let instruction = request.videoCompositionInstruction as? StudioInstruction,
               let output = request.renderContext.newPixelBuffer()
         else {
-            request.finish(with: NSError(domain: "MiRecorder", code: 1, userInfo: [NSLocalizedDescriptionKey: "Render context unavailable"]))
+            request.finish(with: NSError(domain: "PaolaScreenStudio", code: 1, userInfo: [NSLocalizedDescriptionKey: "Render context unavailable"]))
             return
         }
         // No screen frame during intro/outro (empty time): the renderer draws the title cards.

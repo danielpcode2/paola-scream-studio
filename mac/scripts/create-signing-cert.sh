@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
-# Creates a local self-signed code-signing identity ("Mi Recorder Local Signing") in your login
+# Creates a local self-signed code-signing identity ("Paola Screen Studio Local Signing") in your login
 # keychain. With it, every rebuild keeps the same signature, so macOS keeps the Screen Recording,
 # Camera and Microphone permissions instead of asking again after each build.
 #
 # Only touches your login keychain. macOS will ask for your password to trust the certificate
-# for code signing. To undo: Keychain Access › login › delete "Mi Recorder Local Signing".
+# for code signing. To undo: Keychain Access › login › delete "Paola Screen Studio Local Signing".
 set -euo pipefail
 
-NAME="Mi Recorder Local Signing"
+NAME="Paola Screen Studio Local Signing"
 KEYCHAIN="$HOME/Library/Keychains/login.keychain-db"
 OPENSSL=/usr/bin/openssl # LibreSSL: produces PKCS#12 files that `security import` accepts
 

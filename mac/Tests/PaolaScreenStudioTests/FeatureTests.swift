@@ -1,7 +1,7 @@
 import AVFoundation
 import ImageIO
 import XCTest
-@testable import MiRecorder
+@testable import PaolaScreenStudio
 
 final class RecordingClockTests: XCTestCase {
     func testPausedTimeIsRemovedFromProjectTimeline() {
@@ -95,7 +95,7 @@ final class LocalizationAndShortcutTests: XCTestCase {
     func testEveryUsedKeyIsTranslatedInBothLanguages() throws {
         let sources = URL(fileURLWithPath: #filePath)
             .deletingLastPathComponent().deletingLastPathComponent().deletingLastPathComponent()
-            .appending(path: "Sources/MiRecorder")
+            .appending(path: "Sources/PaolaScreenStudio")
         let files = try XCTUnwrap(FileManager.default.enumerator(at: sources, includingPropertiesForKeys: nil))
             .compactMap { $0 as? URL }
             .filter { $0.pathExtension == "swift" }

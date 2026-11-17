@@ -370,7 +370,7 @@ enum Diagnostics {
         }
 
         var lines = [
-            "Mi Recorder \(info?["CFBundleShortVersionString"] as? String ?? "dev") (\(info?["CFBundleVersion"] as? String ?? "-"))",
+            "Paola Screen Studio \(info?["CFBundleShortVersionString"] as? String ?? "dev") (\(info?["CFBundleVersion"] as? String ?? "-"))",
             "macOS \(ProcessInfo.processInfo.operatingSystemVersionString)",
             "Hardware: \(modelName)",
             "Screen recording permission: \(CGPreflightScreenCaptureAccess() ? "granted" : "not granted")",
@@ -393,7 +393,7 @@ enum Diagnostics {
 
     static func saveReport() {
         let panel = NSSavePanel()
-        panel.nameFieldStringValue = "MiRecorder-diagnostics.txt"
+        panel.nameFieldStringValue = "PaolaScreenStudio-diagnostics.txt"
         panel.allowedContentTypes = [.plainText]
         guard panel.runModal() == .OK, let url = panel.url else { return }
         do {

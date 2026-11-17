@@ -86,14 +86,22 @@ final class Preferences: ObservableObject {
         ]
     }
 
+    /// `~/Movies/Paola Screen Studio`, or the folder used before the rename if it already holds projects.
     nonisolated static var defaultProjectsDirectory: URL {
-        FileManager.default.urls(for: .moviesDirectory, in: .userDomainMask)[0]
-            .appending(path: "MiRecorder", directoryHint: .isDirectory)
+        let movies = FileManager.default.urls(for: .moviesDirectory, in: .userDomainMask)[0]
+        return preferringLegacy(movies.appending(path: "Paola Screen Studio", directoryHint: .isDirectory),
+                                legacy: movies.appending(path: "MiRecorder", directoryHint: .isDirectory))
     }
 
     nonisolated static var defaultPresetsDirectory: URL {
-        FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-            .appending(path: "Mi Recorder Presets", directoryHint: .isDirectory)
+        let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        return preferringLegacy(documents.appending(path: "Paola Screen Studio Presets", directoryHint: .isDirectory),
+                                legacy: documents.appending(path: "Mi Recorder Presets", directoryHint: .isDirectory))
+    }
+
+    private nonisolated static func preferringLegacy(_ current: URL, legacy: URL) -> URL {
+        let files = FileManager.default
+        return !files.fileExists(atPath: current.path) && files.fileExists(atPath: legacy.path) ? legacy : current
     }
 
     /// Readable from any thread (ProjectStore, PresetStore).

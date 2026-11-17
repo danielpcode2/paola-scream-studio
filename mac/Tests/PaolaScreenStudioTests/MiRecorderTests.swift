@@ -1,6 +1,6 @@
 import AVFoundation
 import XCTest
-@testable import MiRecorder
+@testable import PaolaScreenStudio
 
 final class ZoomTests: XCTestCase {
     func testPlannerMergesNearbyClicksAndSeparatesDistantOnes() {

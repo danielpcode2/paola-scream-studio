@@ -1,6 +1,6 @@
 import CoreImage
 import XCTest
-@testable import MiRecorder
+@testable import PaolaScreenStudio
 
 final class ZoomEditingTests: XCTestCase {
     private let a = ZoomSegment(start: 1, end: 3, scale: 2)

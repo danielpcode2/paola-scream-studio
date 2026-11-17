@@ -1,4 +1,6 @@
-# paola-scream-studio
+<p align="center"><img src="mac/Resources/Logo.png" width="160" alt="Paola Screen Studio"></p>
+
+# Paola Screen Studio
 
 App de grabación de escritorio: graba pantalla, ventana o área con cámara y micrófono,
 y edita el video con zoom automático, cortes, anotaciones, fondos y exportación a MP4, GIF o ProRes.
@@ -41,8 +43,8 @@ local (se guarda en tu llavero de inicio de sesión):
 ### 4. Compilar y abrir
 
 ```bash
-./scripts/build-app.sh            # genera build/Mi Recorder.app (release, firmada)
-open "build/Mi Recorder.app"
+./scripts/build-app.sh            # genera build/Paola Screen Studio.app (release, firmada)
+open "build/Paola Screen Studio.app"
 ```
 
 La app vive en la barra de menús (y en el Dock si está activado). La primera grabación
@@ -52,7 +54,7 @@ concédelos en *Ajustes del Sistema › Privacidad y seguridad* y reinicia la ap
 Para abrir un proyecto directamente en el editor:
 
 ```bash
-open "build/Mi Recorder.app" --args --open ~/Movies/MiRecorder/<carpeta-del-proyecto>
+open "build/Paola Screen Studio.app" --args --open ~/Movies/"Paola Screen Studio"/<carpeta-del-proyecto>
 ```
 
 ### 5. Tests
@@ -63,19 +65,20 @@ swift test
 
 ### 6. Ciclo de desarrollo
 
-- Edita el código en `Sources/MiRecorder/` y vuelve a ejecutar `./scripts/build-app.sh`
-  (cierra antes la app: `pkill -x MiRecorder`).
+- Edita el código en `Sources/PaolaScreenStudio/` y vuelve a ejecutar `./scripts/build-app.sh`
+  (cierra antes la app: `pkill -x PaolaScreenStudio`).
 - También puedes abrir `Package.swift` en Xcode para depurar. Ten en cuenta que la grabación
   de pantalla necesita ejecutarse como `.app` firmada para que los permisos funcionen;
   `swift run` sirve para probar la interfaz, pero macOS puede bloquear la captura.
-- Los proyectos grabados se guardan en `~/Movies/MiRecorder/` (configurable en Ajustes).
+- Los proyectos grabados se guardan en `~/Movies/Paola Screen Studio/` (configurable en Ajustes).
+- El logo se genera con `swift scripts/make-icon.swift` (crea `Resources/AppIcon.icns` y `Resources/Logo.png`).
 
 ### Problemas comunes
 
 | Problema | Solución |
 | --- | --- |
 | Pide permisos en cada compilación | Ejecuta `./scripts/create-signing-cert.sh` y vuelve a compilar |
-| La grabación sale negra | Concede "Grabación de pantalla" a *Mi Recorder* y reinicia la app |
+| La grabación sale negra | Concede "Grabación de pantalla" a *Paola Screen Studio* y reinicia la app |
 | `swift: command not found` o versión 5.x | Instala Xcode 16+ y selecciónalo con `xcode-select` |
 | No aparece el iPhone en *Dispositivo* | Conéctalo por cable, desbloquéalo y toca "Confiar" |
 

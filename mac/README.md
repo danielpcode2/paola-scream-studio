@@ -1,4 +1,4 @@
-# Mi Recorder
+# Paola Screen Studio
 
 Grabador de pantalla nativo para macOS (Swift + SwiftUI + ScreenCaptureKit) con
 zoom automático, cursor suavizado, fondos y exportación a MP4.
@@ -11,8 +11,8 @@ zoom automático, cursor suavizado, fondos y exportación a MP4.
 ## Uso
 
 ```bash
-./scripts/build-app.sh          # genera build/Mi Recorder.app
-open "build/Mi Recorder.app"
+./scripts/build-app.sh          # genera build/Paola Screen Studio.app
+open "build/Paola Screen Studio.app"
 ```
 
 Para desarrollo: `swift run` y `swift test`. También puedes abrir `Package.swift` en Xcode.
@@ -36,7 +36,7 @@ recompilación, crea una vez la identidad de firma local con `./scripts/create-s
 | Ajustes | General, Grabación, Edición, Exportación rápida, Atajos (globales y configurables) y Avanzado (diagnóstico local y permisos). |
 | Idioma | Español e inglés, se cambia al instante desde Ajustes o desde el menú. |
 
-Los proyectos se guardan en la carpeta configurada (por defecto `~/Movies/MiRecorder/<fecha>/`):
+Los proyectos se guardan en la carpeta configurada (por defecto `~/Movies/Paola Screen Studio/<fecha>/`):
 `recording.mov` (más `recording-2.mov`, … si pausaste), `camera.mov` si usaste la cámara y `project.json`.
 Las exportaciones rápidas van a `<carpeta>/Exports/`.
 
@@ -47,8 +47,8 @@ No incluido (requiere un servicio en la nube): enlaces compartibles y telemetrí
 ## Arquitectura
 
 ```
-Sources/MiRecorder/
-  App/        MiRecorderApp (menú de barra), AppModel (coordinador), WindowManager,
+Sources/PaolaScreenStudio/
+  App/        PaolaScreenStudioApp (menú de barra), AppModel (coordinador), WindowManager,
               Shortcuts (atajos globales Carbon), Localization (ES/EN)
   Model/      Project, Preferences, ProjectStore + PresetStore, ExportOptions
   Recording/  ScreenRecorder (destinos, segmentos, marcas), RecordingClock, CursorTracker,

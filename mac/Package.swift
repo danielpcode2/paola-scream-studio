@@ -2,17 +2,17 @@
 import PackageDescription
 
 let package = Package(
-    name: "MiRecorder",
+    name: "PaolaScreenStudio",
     platforms: [.macOS(.v15)],
     targets: [
         .executableTarget(
-            name: "MiRecorder",
-            path: "Sources/MiRecorder"
+            name: "PaolaScreenStudio",
+            path: "Sources/PaolaScreenStudio"
         ),
         .testTarget(
-            name: "MiRecorderTests",
-            dependencies: ["MiRecorder"],
-            path: "Tests/MiRecorderTests"
+            name: "PaolaScreenStudioTests",
+            dependencies: ["PaolaScreenStudio"],
+            path: "Tests/PaolaScreenStudioTests"
         ),
     ],
     swiftLanguageModes: [.v5]

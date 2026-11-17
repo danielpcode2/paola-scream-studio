@@ -5,13 +5,15 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>es</string>
 	<key>CFBundleDisplayName</key>
-	<string>Mi Recorder</string>
+	<string>Paola Screen Studio</string>
 	<key>CFBundleExecutable</key>
-	<string>MiRecorder</string>
+	<string>PaolaScreenStudio</string>
+	<key>CFBundleIconFile</key>
+	<string>AppIcon</string>
 	<key>CFBundleIdentifier</key>
 	<string>local.mirecorder.app</string>
 	<key>CFBundleName</key>
-	<string>Mi Recorder</string>
+	<string>Paola Screen Studio</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -23,12 +25,12 @@
 	<key>LSMinimumSystemVersion</key>
 	<string>15.0</string>
 	<key>NSAudioCaptureUsageDescription</key>
-	<string>Mi Recorder graba el audio del sistema junto con la pantalla.</string>
+	<string>Paola Screen Studio graba el audio del sistema junto con la pantalla.</string>
 	<key>NSCameraUsageDescription</key>
-	<string>Mi Recorder usa la cámara para mostrarte en una burbuja circular en tus videos.</string>
+	<string>Paola Screen Studio usa la cámara para mostrarte en una burbuja circular en tus videos.</string>
 	<key>NSHighResolutionCapable</key>
 	<true/>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>Mi Recorder usa el micrófono para grabar tu voz junto con la pantalla.</string>
+	<string>Paola Screen Studio usa el micrófono para grabar tu voz junto con la pantalla.</string>
 </dict>
 </plist>

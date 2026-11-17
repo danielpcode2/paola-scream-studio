@@ -2,7 +2,7 @@ import AppKit
 import SwiftUI
 
 @main
-struct MiRecorderApp: App {
+struct PaolaScreenStudioApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
     @ObservedObject private var prefs = Preferences.shared
 
