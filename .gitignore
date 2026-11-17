@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# mac (SwiftPM)
+mac/.build/
+mac/build/
+mac/.swiftpm/
+*.xcodeproj/xcuserdata/
+
+# windows (.NET)
+windows/**/bin/
+windows/**/obj/
+windows/**/.vs/
+*.user

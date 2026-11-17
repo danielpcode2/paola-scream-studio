@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>es</string>
+	<key>CFBundleDisplayName</key>
+	<string>Mi Recorder</string>
+	<key>CFBundleExecutable</key>
+	<string>MiRecorder</string>
+	<key>CFBundleIdentifier</key>
+	<string>local.mirecorder.app</string>
+	<key>CFBundleName</key>
+	<string>Mi Recorder</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.video</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>15.0</string>
+	<key>NSAudioCaptureUsageDescription</key>
+	<string>Mi Recorder graba el audio del sistema junto con la pantalla.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Mi Recorder usa la cámara para mostrarte en una burbuja circular en tus videos.</string>
+	<key>NSHighResolutionCapable</key>
+	<true/>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Mi Recorder usa el micrófono para grabar tu voz junto con la pantalla.</string>
+</dict>
+</plist>
