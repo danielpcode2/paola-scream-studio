@@ -8,7 +8,7 @@ y edita el video con zoom automático, cortes, anotaciones, fondos y exportació
 | Carpeta | Plataforma | Estado |
 | --- | --- | --- |
 | [`mac/`](mac/) | macOS 15+ (Swift, SwiftUI, ScreenCaptureKit) | Funcional |
-| [`windows/`](windows/) | Windows 10/11 (C#, WinUI 3) | En preparación |
+| [`windows/`](windows/) | Windows 10/11 (C#, .NET 8, WPF, FFmpeg) | Compila y pasa tests; pendiente de probar en Windows |
 
 ## Levantar la app de Mac en desarrollo
 
@@ -91,6 +91,14 @@ swift test
 
 Más detalles de funciones y arquitectura en [`mac/README.md`](mac/README.md).
 
-## Windows
+## Levantar la app de Windows en desarrollo
 
-Ver [`windows/README.md`](windows/README.md).
+Resumen (detalles en [`windows/README.md`](windows/README.md)):
+
+```powershell
+winget install Gyan.FFmpeg          # una vez; reinicia la terminal
+cd paola-scream-studio\windows
+dotnet run --project src\PaolaScreenStudio
+```
+
+Requiere Windows 10 (2004+) u 11 y el [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0).

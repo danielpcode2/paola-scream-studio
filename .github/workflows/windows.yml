@@ -1,0 +1,32 @@
+name: Windows
+
+on:
+  push:
+    paths: ["windows/**", ".github/workflows/windows.yml"]
+  pull_request:
+    paths: ["windows/**"]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: windows
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+      - name: Install FFmpeg (used by the integration tests)
+        run: choco install ffmpeg -y --no-progress
+      - name: Test
+        run: dotnet test tests/PaolaScreenStudio.Core.Tests -c Release
+      - name: Publish single .exe
+        run: >
+          dotnet publish src/PaolaScreenStudio -c Release -r win-x64 --self-contained
+          -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -o publish
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PaolaScreenStudio-win-x64
+          path: windows/publish

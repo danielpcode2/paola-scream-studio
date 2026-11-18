@@ -1,0 +1,8 @@
+<Project>
+  <PropertyGroup>
+    <!-- .NET version for every project. Override only to check the build with an older SDK:
+         dotnet build -p:DotnetVersion=net7.0 -->
+    <DotnetVersion Condition="'$(DotnetVersion)' == ''">net8.0</DotnetVersion>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+</Project>
