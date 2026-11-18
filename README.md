@@ -14,7 +14,7 @@ y edita el video con zoom automático, cortes, anotaciones, fondos y exportació
 
 ### 1. Requisitos
 
-- macOS 15 (Sequoia) o superior, en un Mac con Apple Silicon o Intel
+- macOS 15 (Sequoia) o superior, en un Mac con Apple Silicon o Intel (la app se compila universal: `arm64` + `x86_64`)
 - Xcode 16 o superior (incluye el toolchain de Swift 6). Tras instalarlo:
 
   ```bash
@@ -43,7 +43,7 @@ local (se guarda en tu llavero de inicio de sesión):
 ### 4. Compilar y abrir
 
 ```bash
-./scripts/build-app.sh            # genera build/Paola Screen Studio.app (release, firmada)
+./scripts/build-app.sh            # genera build/Paola Screen Studio.app (release, universal, firmada)
 open "build/Paola Screen Studio.app"
 ```
 
@@ -56,6 +56,13 @@ Para abrir un proyecto directamente en el editor:
 ```bash
 open "build/Paola Screen Studio.app" --args --open ~/Movies/"Paola Screen Studio"/<carpeta-del-proyecto>
 ```
+
+### Usar la app en otro Mac
+
+La app compilada es universal (Apple Silicon e Intel). Copia `build/Paola Screen Studio.app`
+a la carpeta Aplicaciones del otro Mac. Como la firma es local, la primera vez ábrela con
+clic derecho › **Abrir**; si macOS la bloquea, permítela en *Ajustes del Sistema › Privacidad
+y seguridad*. También puedes clonar el repositorio y compilarla en ese Mac.
 
 ### 5. Tests
 
